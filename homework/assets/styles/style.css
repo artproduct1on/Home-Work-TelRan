@@ -1,0 +1,40 @@
+html {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 62.5%;
+}
+
+body {
+	margin: 0;
+}
+
+ul {
+	padding: 0;
+	list-style-type: none;
+}
+
+/* Home Work One */
+
+.one {
+	padding: 2.1rem;
+}
+
+.one_title {
+	font-weight: 500;
+	font-size: 2.5rem;
+	margin: 2.1rem 0;
+}
+
+.one_list {
+	display: flex;
+	flex-direction: column;
+	gap: 2.1rem;
+}
+
+.one_list__li {
+	margin: 0;
+	color: aliceblue;
+	background-color: #34495E;
+	padding: 2rem 4rem;
+	border-radius: 2rem;
+	font-size: 1.2rem;
+}
