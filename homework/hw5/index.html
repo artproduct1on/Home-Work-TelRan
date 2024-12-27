@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+	<title>HW5</title>
+</head>
+
+<body>
+	<script>
+		// Task 1
+		const num = +prompt("Enter your number");
+		console.log(num ? "10% = " + num * 0.1 : num + " it's not a number");
+
+		// Task 2
+		const twoNum1 = +prompt("Enter your 1 number"),
+			twoNum2 = +prompt("Enter your 2 number");
+		console.log(twoNum1 >= twoNum2 ? twoNum1 : twoNum2);
+
+		// Task 3
+		const threeNum1 = +prompt("Enter your number");
+		console.log(
+			threeNum1 < 100 ? "Число меньше 100" :
+				threeNum1 > 100 ? "Число больше 100" :
+					"Число равно 100"
+		);
+
+		// Task 4
+		const fourName = prompt("Enter your Name"),
+			fourAge = +prompt("Enter your Age");
+		console.log(`${fourAge >= 18 ? "Hello" : "Hi"} ${fourName}`);
+	</script>
+</body>
+
+</html>
