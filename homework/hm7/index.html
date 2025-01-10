@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+	<title>HW7</title>
+</head>
+
+<body>
+	<script>
+		// Напишите функцию, которая принимает два числовых аргумента и возвращает наименьшее из них.
+		function one(a, b) {
+			return a > b ? b : a;
+		}
+		// Напишите функцию, которая принимает два числовых аргумента и выводит в консоль все четные числа от большего к меньшему.
+		function two(a, b) {
+			if (a === b) {
+				return console.log("two numbers are equal");
+			};
+			let numBig, numSmall;
+			if (a > b) {
+				numBig = a;
+				numSmall = b;
+			} else {
+				numBig = b;
+				numSmall = a;
+			};
+			for (let i = numBig; i >= numSmall; i--) {
+				i % 2 === 0 && console.log(i);
+			};
+		};
+		// Напишите функцию power, которая принимает два числовых аргумента (основание степени и саму степень) и возвращает число в указанной степени. Значение степени должно быть указано по умолчанию 2.
+		function power(number, degree) {
+			const num = degree ? number ** degree : number ** 2;
+			console.log(num);
+		};
+		// Напишите функцию, которая принимает числовой аргумент n и считает сумму чисел от 1 до n.
+		function four(n) {
+			if (n < 2) {
+				return console.log("it's very small");
+			};
+			let sum = 0;
+			for (let i = 1; i <= n; i++) {
+				sum += i;
+			};
+			console.log(sum);
+		};
+		// Напишите функцию, которая принимает два числовых аргумента n и m и считает сумму четных чисел и нечетных чисел от n до m. Суммы выведите в консоль (в начале сумму четных чисел, а затем сумму нечетных).
+		function five(n, m) {
+			if (n >= m) {
+				return console.log("m is very small");
+			};
+
+			let even = 0, odd = 0;
+			for (let i = n; i <= m; i++) {
+				i % 2 === 0 ? even += i : odd += i;
+			};
+			console.log(`
+				sum Even: ${even}
+				sum Odd: ${odd} 
+			`)
+		};
+		// Напишите функцию, которая принимает в качестве аргументов массив строк,
+		// а возвращает первый самый длинный элемент массива.
+		//  Если входной массив пуст, функция возвращает null. Если есть несколько одинаковых по длине элементов
+		// - функция возвращает первый из этих элементов.
+		// Пример: [ 'one', 'two', 'three' ] => 'three'
+		function six(arr) {
+			if (arr.length === 0) {
+				return console.log(null);
+			};
+			const answer = {
+				name: "",
+				lng: 0,
+			};
+			arr.forEach((item) => {
+				const num = item.length
+				if (num > answer.lng) {
+					answer.name = item;
+					answer.lng = num;
+				};
+			});
+			console.log(answer.name);
+		};
+	</script>
+</body>
+
+</html>

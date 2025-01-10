@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "rootDir": "./classwork/script",
+    "outDir": "./classwork",
+    "module": "commonjs",
+    "target": "es6",
+    "strict": true,
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

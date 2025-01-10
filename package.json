@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:class": "nodemon classwork/script/index.js"
+    "start:class": "nodemon --watch classwork/script --ext ts --exec \"tsc && node classwork/index.js\""
   },
   "author": "Artem Zaikin",
   "license": "ISC",
   "dependencies": {
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+    "typescript": "^5.7.3"
   }
 }
