@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+	<title>HW8</title>
+</head>
+
+<body>
+	<div class="numbers"></div>
+	<div class="stringscontainer"></div>
+	<div class="userscontainer"></div>
+
+	<script>
+		// Написать цикл, который создает множество параграфов с каждым десятым числом в промежутке от 100 до 50 (т.е. 100, 90, 80, 70, 60, 50). Добавить созданные параграфы в div с классом numbers.
+		const blockNumbers = document.querySelector(".numbers");
+		function numbersAdd() {
+			for (let i = 100; i >= 50; i -= 10) {
+				const p = document.createElement("p");
+				p.textContent = i;
+				blockNumbers.append(p);
+			};
+		};
+		// numbersAdd()
+
+		// Написать цикл, который проходится по массиву строк, для каждой строки создает параграф и добавляет его в div с классом stringscontainer. Строки взять произвольные.
+		const arrStrings = [
+			"Он для каждого",
+			"Он создаёт новый",
+			"Это один из самых сложных",
+		]
+		const blockStrings = document.querySelector(".stringscontainer");
+		function numbersAdd(arr) {
+			arr.forEach(i => {
+				const p = document.createElement("p");
+				p.textContent = i;
+				blockStrings.append(p)
+			});
+		};
+		// numbersAdd(arrStrings);
+
+		// Написать цикл, который проходится по массиву с объектами - у объектов свойства firstname, lastname и  age (данные взять произвольные) - и создает карточки только для совершеннолетних пользователей. Карточка должна содержать информацию об имени, фамилии и возрасте пользователя. Добавить все карточки в div с классом userscontainer.
+		const usersInfo = [
+			{
+				firstname: "Alex",
+				lastname: "Dub",
+				age: 55,
+			},
+			{
+				firstname: "Anika",
+				lastname: "Shokoladova",
+				age: 16,
+			},
+			{
+				firstname: "Pushka",
+				lastname: "Pitardovna",
+				age: 24,
+			},
+		];
+		const blockUsers = document.querySelector(".userscontainer");
+		function numbersUser(arr) {
+			let content = "";
+			arr.forEach(({ firstname, lastname, age }) => {
+				if (age >= 18) content +=
+					`	<div class="card">
+							<h3 class="card__name">Full name: ${firstname} ${lastname}</h3>
+							<p class="card__age">Age: ${age}</p>
+						</div>
+				`;
+			});
+			blockUsers.innerHTML = content;
+		};
+		// numbersUser(usersInfo);
+
+	</script>
+</body>
+
+</html>

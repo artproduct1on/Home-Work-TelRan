@@ -1,21 +1,19 @@
 "use strict";
-class People {
-    constructor(n, a, w, h) {
-        this.name = n;
-        this.age = a;
-        this._weight = w;
-        this._height = h;
-    }
-    ;
-    get weight() {
-        return this._weight;
-    }
-    ;
-    weightSet(a) {
-        this._weight += a;
+;
+const users = [
+    { name: 'Дима', age: 17, info: 'Очень крутой дизайнер' },
+    { name: 'Петя', age: 18, info: 'Хорошо играет в игры' },
+    { name: 'Саша', age: 19, info: 'Хорошо играет в игры' },
+];
+function setConsol(arr) {
+    for (const { name, age, info } of arr) {
+        const h = document.createElement("h2");
+        const div = document.createElement("div");
+        h.textContent = age >= 18 ? `${name} проходи!` : `${name} не проходи!`;
+        div.textContent = info;
+        document.body.append(h, div);
     }
     ;
 }
-const person = new People("Alex", 34, 82, 181);
-person.weightSet(9);
-console.log(person.weight);
+;
+setConsol(users);
