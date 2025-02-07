@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "rootDir": "./classwork/script",
-    "outDir": "./classwork",
+    "rootDir": "cw/script",
+    "outDir": "cw",
     "module": "commonjs",
     "target": "es6",
     "strict": true,

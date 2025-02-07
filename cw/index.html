@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+	<p class="counter">0</p>
+	<button class="increment">plus 1</button>
+	<button class="decrement">minus 1</button>
+
+	<script>
+		const increment = document.querySelector(".increment");
+		const decrement = document.querySelector(".decrement");
+		const counter = document.querySelector(".counter");
+		let result = 0;
+
+		function mathFunction(a) {
+			result += a;
+			counter.textContent = result;
+		};
+
+		increment.addEventListener("click", () => mathFunction(1))
+		decrement.addEventListener("click", () => mathFunction(-1))
+	</script>
+
+
+	<!-- <script src="./index.js"></script> -->
+</body>
+
+</html>

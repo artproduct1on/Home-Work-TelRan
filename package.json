@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:class": "nodemon --watch classwork/script --ext ts --exec \"tsc && node classwork/index.js\""
+    "start:class": "tsc --watch",
+    "dev:class": "nodemon --watch classwork/script --ext ts --exec \"tsc && node classwork/index.js\""
   },
   "author": "Artem Zaikin",
   "license": "ISC",
