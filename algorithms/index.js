@@ -7,8 +7,14 @@
 // 3.2. Иначе, c больше или равно a, тогда c - наибольшее число, завершаем алгоритм.
 
 function compareNumbers(a, b, c) {
-	if (a <= b) b = a;
+	if (a <= b) b = a; // a = b
 	return a > c ? "a - " + a : "c - " + c;
 };
 
 console.log("Наибольшее число = " + compareNumbers(12, 3, 7));
+
+
+
+const compareNumbersTwo = (a, b, c) => { Math.max(a, b, c) };
+
+console.log(compareNumbersTwo(12, 22, 7));
