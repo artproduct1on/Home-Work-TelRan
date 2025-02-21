@@ -1,13 +1,12 @@
 const createCard = (product) => {
   const rating = Math.round(product.reviews.reduce((acc, i) => acc += i.rating, 0) / product.reviews.length);
-  console.log(rating);
 
   return `<div class="card">
     <img src="${product.images[0]}" alt="Product" class="card__img">
     <p class="card__title">${product.title}</p>
     <p><b>Stock</b>: ${product.stock}</p>
     <p><b>Price</b>: $ ${product.price}</p>
-    <p><b>Rating</b>: ${product.rating}</p>
+    <p><b>Rating</b>: ${rating}</p>
     <p><b>Category</b>: ${product.category}</p>
   </div>`
 };
